@@ -3,86 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>救护车信息 - 救护车辆信息共享</title>
+    <title>救护车辆信息</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft Yahei", sans-serif;
+            font-family: "微软雅黑",sans-serif;
         }
         body {
-            background-color: #f5f5f5;
+            background: #f4f4f4;
+            padding: 18px;
+        }
+        .top-title {
+            text-align: center;
+            font-size: 23px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 25px;
+        }
+        .info-box {
+            background: #fff;
+            border-radius: 10px;
             padding: 20px;
         }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-        }
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .car-plate {
-            font-size: 36px;
-            color: #1677ff;
-            text-align: center;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        .info-row {
-            display: flex;
-            margin: 15px 0;
-            font-size: 16px;
-        }
-        .info-label {
-            width: 120px;
-            color: #666;
-        }
-        .info-value {
-            flex: 1;
-            color: #333;
-        }
-        .report-btn {
-            background-color: #e63946;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 30px;
+        .box-title {
             font-size: 20px;
-            width: 100%;
-            margin: 30px 0;
-            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
-        .tip {
+        .plate-bg {
+            background: #eeeeee;
+            border-radius: 8px;
+            padding: 18px 0;
+            margin: 15px 0;
+        }
+        .plate-text {
+            text-align: center;
+            font-size: 35px;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .item {
+            display: flex;
+            font-size: 16px;
+            margin: 14px 0;
+        }
+        .label {
+            width: 110px;
+            color: #666;
+        }
+        .value {
+            flex: 1;
+            color: #222;
+        }
+        /* 红色拨号按钮 */
+        .call-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e53935;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            padding: 14px 0;
+            font-size: 19px;
+            margin-top: 45px;
+        }
+        .icon-tel {
+            font-size: 20px;
+            margin-right: 6px;
+            /* 图标无下划线 */
+            text-decoration: none !important;
+        }
+        .tel-text {
+            text-decoration: underline;
+        }
+        .tips {
             text-align: center;
             color: #666;
-            font-size: 16px;
+            font-size: 15px;
+            margin-top: 20px;
             line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="header">救护车辆信息</div>
-    <div class="card">
-        <div style="font-size: 22px; font-weight: bold; margin-bottom: 20px;">车辆信息</div>
-        <div class="car-plate">粤LQ696K</div>
-        <div class="info-row">
-            <div class="info-label">车辆编号</div>
-            <div class="info-value">4413232025112800316</div>
+    <div class="top-title">救护车辆信息</div>
+    <div class="info-box">
+        <div class="box-title">车辆信息</div>
+        <div class="plate-bg">
+            <div class="plate-text">粤LQ696K</div>
         </div>
-        <div class="info-row">
-            <div class="info-label">所属医疗机构</div>
-            <div class="info-value">惠东黄埠天德医院</div>
+        <div class="item">
+            <div class="label">车辆编号</div>
+            <div class="value">4413232025112800316</div>
+        </div>
+        <div class="item">
+            <div class="label">所属医疗机构</div>
+            <div class="value">惠东黄埠天德医院</div>
         </div>
     </div>
-    <button class="report-btn">📞 线索收集电话(075212345)</button>
-    <div class="tip">
+
+    <a href="tel:075212345" class="call-btn">
+        <span class="icon-tel">📞</span>
+        <span class="tel-text">线索收集电话(075212345)</span>
+    </a>
+
+    <div class="tips">
         如有关于该救护车辆的服务质量、违规行为等<br>
         问题，请联系举报。
     </div>
